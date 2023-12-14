@@ -1,6 +1,12 @@
+import { Metadata } from "next";
+
 import { fetchCustomers } from "@/app/lib/data";
 import Breadcrumbs from "@/app/ui/invoices/breadcrumbs";
 import Form from "@/app/ui/invoices/create-form";
+
+export const metadata: Metadata = {
+  title: 'Create Invoice'
+}
 
 const DashboardInvoicesCreatePage = async() => {
   const breadcrumbs = [
