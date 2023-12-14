@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 import { fetchCustomers, fetchInvoiceById } from "@/app/lib/data";
 
 import Breadcrumbs from "@/app/ui/invoices/breadcrumbs";
@@ -28,6 +30,10 @@ const DashboardInvoiceIdEditPage = async({
     fetchInvoiceById(id),
     fetchCustomers(),
   ]);
+
+  if (!invoice) {
+    notFound();
+  }
 
   return (
     <main>
