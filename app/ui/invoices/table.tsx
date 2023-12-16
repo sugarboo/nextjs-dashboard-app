@@ -16,15 +16,15 @@ export default async function InvoicesTable({
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
-        <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
+        <div className="rounded-lg bg-gray-50 dark:bg-neutral-700 p-2 md:pt-0">
           <div className="md:hidden">
             {invoices && invoices.length 
               ? invoices.map((invoice) => (
                 <div
                   key={invoice.id}
-                  className="mb-2 w-full rounded-md bg-white p-4"
+                  className="mb-2 w-full rounded-md bg-white dark:bg-neutral-600 p-4"
                 >
-                  <div className="flex items-center justify-between border-b pb-4">
+                  <div className="flex items-center justify-between border-b dark:border-neutral-700 pb-4">
                     <div>
                       <div className="mb-2 flex items-center">
                         <Image
@@ -36,7 +36,7 @@ export default async function InvoicesTable({
                         />
                         <p>{invoice.name}</p>
                       </div>
-                      <p className="text-sm text-gray-500">{invoice.email}</p>
+                      <p className="text-sm text-neutral-400">{invoice.email}</p>
                     </div>
                     <InvoiceStatus status={invoice.status} />
                   </div>
@@ -55,13 +55,13 @@ export default async function InvoicesTable({
                 </div>
               ))
               : (
-                <div className="flex justify-center items-center mb-2 w-full rounded-md bg-gray-50 p-4 text-gray-400">
+                <div className="flex justify-center items-center mb-2 w-full rounded-md bg-gray-50 dark:bg-neutral-700 p-4 text-gray-400">
                   No Data.
                 </div>
               )
             }
           </div>
-          <table className="hidden min-w-full text-gray-900 md:table">
+          <table className="hidden min-w-full text-gray-900 dark:text-white/80 md:table">
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>
                 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
@@ -84,12 +84,12 @@ export default async function InvoicesTable({
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white">
+            <tbody className="bg-white dark:bg-neutral-700">
               {invoices && invoices.length 
                 ? invoices.map((invoice) => (
                   <tr
                     key={invoice.id}
-                    className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
+                    className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg dark:bg-neutral-600 dark:border-neutral-700"
                   >
                     <td className="whitespace-nowrap py-3 pl-6 pr-3">
                       <div className="flex items-center gap-3">
@@ -124,7 +124,7 @@ export default async function InvoicesTable({
                   </tr>
                 ))
                 : (
-                  <tr className="w-full h-12 border-b py-3 text-sm bg-gray-50 last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
+                  <tr className="w-full h-12 border-b py-3 text-sm bg-gray-50 dark:bg-neutral-700 last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
                     <td
                       colSpan={5}
                       className="w-full text-center text-sm text-gray-400"

@@ -11,10 +11,10 @@ export default function Page() {
         <AcmeLogo />
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 dark:bg-gray-200 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
+        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 dark:bg-neutral-600 px-6 py-10 md:w-2/5 md:px-20">
+          <p className={`${lusitana.className} text-xl text-gray-800 dark:text-white/80 md:text-3xl md:leading-normal`}>
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
+            <a href="https://nextjs.org/learn/" className="text-blue-500 hover:text-blue-400 dark:text-blue-300 dark:hover:text-blue-200">
               Next.js Learn Course
             </a>
             , brought to you by Vercel.
@@ -32,14 +32,14 @@ export default function Page() {
             src="/hero-desktop.png"
             width={1000}
             height={760}
-            className="hidden md:block"
+            className="hidden md:block dark:opacity-75"
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <Image
             src="/hero-mobile.png"
             width={560}
             height={620}
-            className="block md:hidden"
+            className="block md:hidden dark:opacity-75"
             alt="Screenshots of the dashboard project showing mobile version"
           />
         </div>

@@ -32,7 +32,7 @@ export default function Search({
         Search
       </label>
       <input
-        className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+        className="peer block w-full rounded-md border border-gray-200 dark:border-gray-800 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500 dark:placeholder:text-white/20 dark:bg-neutral-600 dark:text-white/70"
         defaultValue={searchParams.get('query')?.toString()}
         placeholder={placeholder}
         onChange={(e) => {
