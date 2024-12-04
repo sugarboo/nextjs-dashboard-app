@@ -38,7 +38,7 @@ export default async function LatestInvoices() {
                     height={32}
                   />
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold md:text-base text-white/90">
+                    <p className="truncate text-sm font-semibold md:text-base dark:text-white/90">
                       {invoice.name}
                     </p>
                     <p className="hidden text-sm text-gray-500 dark:text-white/50 sm:block">
@@ -47,7 +47,7 @@ export default async function LatestInvoices() {
                   </div>
                 </div>
                 <p
-                  className={`${lusitana.className} truncate text-sm font-medium md:text-base text-white/90`}
+                  className={`${lusitana.className} truncate text-sm font-medium md:text-base dark:text-white/90`}
                 >
                   {invoice.amount}
                 </p>
